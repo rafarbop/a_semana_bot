@@ -1,0 +1,18 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+pytelegrambotapi = "*"
+datetime = "*"
+pydub = "*"
+pyttsx3 = "*"
+python-decouple = "==3.6"
+pytz = "*"
+tzlocal = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.8"
