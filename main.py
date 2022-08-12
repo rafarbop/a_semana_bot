@@ -10,7 +10,7 @@ bot = telebot.TeleBot(API_KEY)
 def responder(msg):
     # To send a Message File
     bot.reply_to(
-        msg, msg.text+'___->'+str(datetime.fromtimestamp(msg.date)))
+        msg, msg.text+'___->'+msg.date)
 
 
 # bot.polling()
