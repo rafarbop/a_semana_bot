@@ -12,7 +12,7 @@ def responder(msg):
     # To send a Message File
     info = f'''
     Unix Timestemp: {msg.date}
-    Time: {datetime.fromtimestamp(msg.date)}
+    Time: {datetime.fromtimestamp(msg.date,tz=time.tzname[0])}
     Timezone: {time.tzname}
     '''
     bot.reply_to(
