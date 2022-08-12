@@ -1,6 +1,6 @@
 import telebot
 from decouple import config
-from datetime import datetime
+from datetime import datetime,timezone
 import time
 import pytz
 
@@ -11,7 +11,7 @@ bot = telebot.TeleBot(API_KEY)
 @bot.message_handler(func=lambda message: True)
 def responder(msg):
     # To send a Message File
-    timezone_local = datetime.datetime.now(datetime.timezone.utc).astimezone().tzinfo
+    timezone_local = datetime.now(timezone.utc).astimezone().tzinfo
     info = f'''
     Unix Timestemp: {msg.date}
     Time: {datetime.fromtimestamp(msg.date,timezone_local)}
